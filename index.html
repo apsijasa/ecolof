@@ -6,17 +6,18 @@
     <title>ECOLOF - Ungüentos Medicinales</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="cart.js" defer></script>
 </head>
 <body>
     <!-- Botón flotante de WhatsApp -->
-    <a href="https://wa.me/+56950473099" class="whatsapp-float" target="_blank">
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
         <i class="fab fa-whatsapp"></i>
     </a>
     
     <header>
         <div class="container">
             <div class="logo">
-                <h1>ECOLOF</h1>
+                <h1>NaturalHealing</h1>
                 <p>Remedios naturales para bienestar integral</p>
             </div>
             <nav>
@@ -26,6 +27,7 @@
                     <li><a href="#beneficios">Beneficios</a></li>
                     <li><a href="#testimonios">Testimonios</a></li>
                     <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-counter" class="cart-counter">0</span></a></li>
                 </ul>
             </nav>
         </div>
@@ -33,7 +35,7 @@
 
     <section id="hero">
         <div class="hero-image">
-            <img src="assets/image/hierbas-hero.jpg" alt="Imagen de plantas medicinales">
+            <img src="/api/placeholder/1200/600" alt="Imagen de plantas medicinales">
         </div>
         <div class="container">
             <div class="hero-content">
@@ -78,9 +80,10 @@
             <p class="section-description">Selecciona el ungüento ideal para tu necesidad específica</p>
             
             <div class="productos-grid">
-                <div class="producto-card">
-                    <img src="assets/image/canabis.jpg" alt="Ungüento de Cannabis">
+                <div class="producto-card" data-product-id="1">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Cannabis">
                     <h3>Ungüento de Cannabis</h3>
+                    <div class="producto-precio">$25.99</div>
                     <div class="caracteristicas">
                         <h4>Características:</h4>
                         <ul>
@@ -93,9 +96,10 @@
                     <a href="#" class="btn-secondary">Comprar</a>
                 </div>
                 
-                <div class="producto-card">
-                    <img src="assets/image/menta.jpg" alt="Ungüento de Menta">
+                <div class="producto-card" data-product-id="2">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Menta">
                     <h3>Ungüento de Menta</h3>
+                    <div class="producto-precio">$19.99</div>
                     <div class="caracteristicas">
                         <h4>Características:</h4>
                         <ul>
@@ -108,9 +112,10 @@
                     <a href="#" class="btn-secondary">Comprar</a>
                 </div>
                 
-                <div class="producto-card">
-                    <img src="assets/image/eucaliptu.jpg" alt="Ungüento de Eucalipto">
+                <div class="producto-card" data-product-id="3">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Eucalipto">
                     <h3>Ungüento de Eucalipto</h3>
+                    <div class="producto-precio">$19.99</div>
                     <div class="caracteristicas">
                         <h4>Características:</h4>
                         <ul>
@@ -123,9 +128,10 @@
                     <a href="#" class="btn-secondary">Comprar</a>
                 </div>
                 
-                <div class="producto-card">
-                    <img src="assets/image/ruda.jpg" alt="Ungüento de Ruda">
+                <div class="producto-card" data-product-id="4">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Ruda">
                     <h3>Ungüento de Ruda</h3>
+                    <div class="producto-precio">$23.50</div>
                     <div class="caracteristicas">
                         <h4>Características:</h4>
                         <ul>
@@ -138,9 +144,10 @@
                     <a href="#" class="btn-secondary">Comprar</a>
                 </div>
                 
-                <div class="producto-card">
-                    <img src="assets/image/lavanda.jpg" alt="Ungüento de Lavanda">
+                <div class="producto-card" data-product-id="5">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Lavanda">
                     <h3>Ungüento de Lavanda</h3>
+                    <div class="producto-precio">$22.50</div>
                     <div class="caracteristicas">
                         <h4>Características:</h4>
                         <ul>
@@ -153,14 +160,22 @@
                     <a href="#" class="btn-secondary">Comprar</a>
                 </div>
                 
-                <div class="producto-card">
-                    <img src="assets/image/calendula.jpg" alt="Ungüento de Caléndula">
+                <div class="producto-card" data-product-id="6">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Caléndula">
                     <h3>Ungüento de Caléndula</h3>
+                    <div class="producto-precio">$21.99</div>
                     <div class="caracteristicas">
                         <h4>Características:</h4>
                         <ul>
                             <li><strong>Propiedades:</strong> Regenerador celular, antiinflamatorio y calmante.</li>
                             <li><strong>Ideal para:</strong> Dermatitis, eccemas, heridas, quemaduras y piel sensible.</li>
+                            <li><strong>Componentes:</strong> Extracto de caléndula, aceite de oliva y vitamina E.</li>
+                            <li><strong>Uso:</strong> Aplicar en capas finas 2-3 veces al día sobre piel limpia.</li>
+                        </ul>
+                    </div>
+                    <a href="#" class="btn-secondary">Comprar</a>
+                </div>
+            </div>
                             <li><strong>Componentes:</strong> Extracto de caléndula, aceite de oliva y vitamina E.</li>
                             <li><strong>Uso:</strong> Aplicar en capas finas 2-3 veces al día sobre piel limpia.</li>
                         </ul>
@@ -251,15 +266,15 @@
                     <p>Estamos aquí para ayudarte a encontrar el ungüento perfecto para tus necesidades.</p>
                     <div class="info-item">
                         <i class="fas fa-phone"></i>
-                        <p>+56950473099</p>
+                        <p>+123 456 7890</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-envelope"></i>
-                        <p>info@ecolof.cl</p>
+                        <p>info@naturalhealing.com</p>
                     </div>
                     <div class="info-item">
                         <i class="fas fa-map-marker-alt"></i>
-                        <p>Parcelo 12E, Pie del Mauco, ConCon, Valparaíso.</p>
+                        <p>Calle Botánica 123, Ciudad Verde</p>
                     </div>
                     <div class="social-media">
                         <a href="#"><i class="fab fa-facebook"></i></a>
@@ -290,7 +305,7 @@
         </div>
     </section>
 
-<!--<section id="newsletter">
+    <section id="newsletter">
         <div class="container">
             <div class="newsletter-wrapper">
                 <div class="newsletter-text">
@@ -305,7 +320,7 @@
                 </div>
             </div>
         </div>
-    </section> -->
+    </section>
 
     <footer>
         <div class="container">

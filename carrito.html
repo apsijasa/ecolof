@@ -1,0 +1,175 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Carrito de Compras - NaturalHealing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>NaturalHealing</h1>
+                <p>Remedios naturales para bienestar integral</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="index.html#beneficios">Beneficios</a></li>
+                    <li><a href="index.html#testimonios">Testimonios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="carrito.html" class="active"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-counter" class="cart-counter">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="cart">
+        <div class="container">
+            <h2 class="section-title">Tu Carrito de Compras</h2>
+            
+            <div class="cart-container">
+                <div class="cart-items" id="cart-items-container">
+                    <!-- Los elementos del carrito se cargarán dinámicamente con JavaScript -->
+                </div>
+                
+                <div class="cart-summary">
+                    <h3>Resumen del Pedido</h3>
+                    
+                    <div class="summary-item">
+                        <span>Subtotal</span>
+                        <span id="cart-subtotal">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Envío</span>
+                        <span id="cart-shipping">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-item">
+                        <span>Impuestos</span>
+                        <span id="cart-tax">$0.00</span>
+                    </div>
+                    
+                    <div class="summary-item total">
+                        <span>Total</span>
+                        <span id="cart-total">$0.00</span>
+                    </div>
+                    
+                    <div class="cart-coupon">
+                        <input type="text" placeholder="Código de descuento">
+                        <button class="btn-secondary">Aplicar</button>
+                    </div>
+                    
+                    <a href="pago.html" class="btn-primary pay-btn">
+                        <i class="fas fa-credit-card"></i> PAGAR
+                    </a>
+                    
+                    <div class="secure-payment">
+                        <i class="fas fa-lock"></i> Pago seguro garantizado
+                    </div>
+                    
+                    <div class="payment-methods">
+                        <i class="fab fa-cc-visa"></i>
+                        <i class="fab fa-cc-mastercard"></i>
+                        <i class="fab fa-cc-amex"></i>
+                        <i class="fab fa-cc-paypal"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="continue-shopping">
+                <a href="index.html#productos" class="btn-secondary">
+                    <i class="fas fa-arrow-left"></i> Continuar Comprando
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <section id="related-products">
+        <div class="container">
+            <h2 class="section-title">También podría interesarte</h2>
+            
+            <div class="productos-grid related">
+                <div class="producto-card" data-product-id="7">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Árnica">
+                    <h3>Ungüento de Árnica</h3>
+                    <div class="producto-precio">$24.99</div>
+                    <a href="#" class="btn-secondary">Añadir al carrito</a>
+                </div>
+                
+                <div class="producto-card" data-product-id="8">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Romero">
+                    <h3>Ungüento de Romero</h3>
+                    <div class="producto-precio">$20.99</div>
+                    <a href="#" class="btn-secondary">Añadir al carrito</a>
+                </div>
+                
+                <div class="producto-card" data-product-id="9">
+                    <img src="/api/placeholder/300/200" alt="Ungüento de Aloe Vera">
+                    <h3>Ungüento de Aloe Vera</h3>
+                    <div class="producto-precio">$18.50</div>
+                    <a href="#" class="btn-secondary">Añadir al carrito</a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <h3>NaturalHealing</h3>
+                    <p>El poder curativo de la naturaleza</p>
+                </div>
+                <div class="footer-links">
+                    <div class="link-group">
+                        <h4>Productos</h4>
+                        <ul>
+                            <li><a href="#">Ungüentos</a></li>
+                            <li><a href="#">Aceites</a></li>
+                            <li><a href="#">Infusiones</a></li>
+                            <li><a href="#">Sets de regalo</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Empresa</h4>
+                        <ul>
+                            <li><a href="#">Sobre nosotros</a></li>
+                            <li><a href="#">Nuestra misión</a></li>
+                            <li><a href="#">Proceso de elaboración</a></li>
+                            <li><a href="#">Blog</a></li>
+                        </ul>
+                    </div>
+                    <div class="link-group">
+                        <h4>Ayuda</h4>
+                        <ul>
+                            <li><a href="#">Preguntas frecuentes</a></li>
+                            <li><a href="#">Envíos</a></li>
+                            <li><a href="#">Devoluciones</a></li>
+                            <li><a href="#">Contacto</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 NaturalHealing. Todos los derechos reservados.</p>
+                <div class="legal-links">
+                    <a href="#">Términos y condiciones</a>
+                    <a href="#">Política de privacidad</a>
+                    <a href="#">Política de cookies</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>

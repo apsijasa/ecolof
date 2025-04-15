@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Proceso de Pago - NaturalHealing</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="cart.js" defer></script>
+</head>
+<body>
+    <!-- Botón flotante de WhatsApp -->
+    <a href="https://wa.me/1234567890" class="whatsapp-float" target="_blank">
+        <i class="fab fa-whatsapp"></i>
+    </a>
+    
+    <header>
+        <div class="container">
+            <div class="logo">
+                <h1>NaturalHealing</h1>
+                <p>Remedios naturales para bienestar integral</p>
+            </div>
+            <nav>
+                <ul>
+                    <li><a href="index.html#inicio">Inicio</a></li>
+                    <li><a href="index.html#productos">Productos</a></li>
+                    <li><a href="index.html#beneficios">Beneficios</a></li>
+                    <li><a href="index.html#testimonios">Testimonios</a></li>
+                    <li><a href="index.html#contacto">Contacto</a></li>
+                    <li><a href="carrito.html"><i class="fas fa-shopping-cart"></i> Carrito <span id="cart-counter" class="cart-counter">0</span></a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+
+    <section id="payment">
+        <div class="container">
+            <h2 class="section-title">Proceso de Pago</h2>
+            
+            <div class="payment-container">
+                <div class="checkout-steps">
+                    <div class="step completed">
+                        <div class="step-number">1</div>
+                        <div class="step-label">Carrito</div>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step active">
+                        <div class="step-number">2</div>
+                        <div class="step-label">Pago</div>
+                    </div>
+                    <div class="step-divider"></div>
+                    <div class="step">
+                        <div class="step-number">3</div>
+                        <div class="step-label">Confirmación</div>
+                    </div>
+                </div>
+                
+                <div class="payment-wrapper">
+                    <div class="payment-details">
+                        <h3>Datos de Envío</h3>
+                        <form class="payment-form" id="payment-form">
+                            <div class="form-group">
+                                <label for="nombre">Nombre completo</label>
+                                <input type="text" id="nombre" name="nombre" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="email">Email</label>
+                                    <input type="email" id="email" name="email" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="telefono">Teléfono</label>
+                                    <input type="tel" id="telefono" name="telefono" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="direccion">Dirección</label>
+                                <input type="text" id="direccion" name="direccion" required>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="ciudad">Ciudad</label>
+                                    <input type="text" id="ciudad" name="ciudad" required>
+                                </div>
+                                <div class="form-group">
+                                    <label for="codigo_postal">Código Postal</label>
+                                    <input type="text" id="codigo_postal" name="codigo_postal" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="pais">País</label>
+                                <select id="pais" name="pais" required>
+                                    <option value="">Selecciona un país</option>
+                                    <option value="AR">Argentina</option>
+                                    <option value="BO">Bolivia</option>
+                                    <option value="CL">Chile</option>
+                                    <option value="CO">Colombia</option>
+                                    <option value="CR">Costa Rica</option>
+                                    <option value="DO">República Dominicana</option>
+                                    <option value="EC">Ecuador</option>
+                                    <option value="SV">El Salvador</option>
+                                    <option value="GT">Guatemala</option>
+                                    <option value="HN">Honduras</option>
+                                    <option value="MX">México</option>
+                                    <option value="NI">Nicaragua</option>
+                                    <option value="PA">Panamá</option>
+                                    <option value="PY">Paraguay</option>
+                                    <option value="PE">Perú</option>
+                                    <option value="ES">España</option>
+                                    <option value="UY">Uruguay</option>
+                                    <option value="VE">Venezuela</option>
+                                </select>
+                            </div>
+                            
+                            <h3>Método de Pago</h3>
+                            
+                            <div class="payment-methods-selection">
+                                <div class="payment-method-option">
+                                    <input type="radio" id="credit-card" name="payment-method" checked>
+                                    <label for="credit-card">Tarjeta de Crédito/Débito</label>
+                                </div>
+                                <div class="payment-method-option">
+                                    <input type="radio" id="paypal" name="payment-method">
+                                    <label for="paypal">PayPal</label>
+                                </div>
+                                <div class="payment-method-option">
+                                    <input type="radio" id="transfer" name="payment-method">
+                                    <label for="transfer">Transferencia Bancaria</label>
+                                </div>
+                            </div>
+                            
+                            <div id="credit-card-details">
+                                <div class="form-group">
+                                    <label for="card-number">Número de tarjeta</label>
+                                    <div class="card-input-wrapper">
+                                        <input type="text" id="card-number" name="card-number" placeholder="XXXX XXXX XXXX XXXX" maxlength="19" required>
+                                        <div class="card-icons">
+                                            <i class="fab fa-cc-visa"></i>
+                                            <i class="fab fa-cc-mastercard"></i>
+                                            <i class="fab fa-cc-amex"></i>
+                                        </div>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-row">
+                                    <div class="form-group">
+                                        <label for="expiry">Fecha de expiración</label>
+                                        <input type="text" id="expiry" name="expiry" placeholder="MM/AA" maxlength="5" required>
+                                    </div>
+                                    <div class="form-group">
+                                        <label for="cvv">CVV</label>
+                                        <input type="text" id="cvv" name="cvv" placeholder="123" maxlength="4" required>
+                                    </div>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="card-name">Nombre en la tarjeta</label>
+                                    <input type="text" id="card-name" name="card-name" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group terms-checkbox">
+                                <input type="checkbox" id="terms" name="terms" required>
+                                <label for="terms">Acepto los <a href="#">Términos y Condiciones</a> y la <a href="#">Política de Privacidad</a></label>
+                            </div>
+                            
+                            <button type="submit" class="btn-primary pay-now-btn">
+                                <i class="fas fa-lock"></i> FINALIZAR COMPRA
+                            </button>
+                        </form>
+                    </div>
+                    
+                    <div class="order-summary" id="order-summary">
+                        <h3>Resumen del Pedido</h3>
+                        
+                        <div class="order-items" id="order-items">
+                            <!-- Los elementos del carrito se cargarán dinámicamente con JavaScript -->
+                        </div>
+                        
+                        <div class="order-totals">
+                            <div class="summary-item">
+                                <span>Subtotal</span>
+                                <span id="order-subtotal">$0.00</span>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <span>Envío</span>
+                                <span id="order-shipping">$0.00</span>
+                            </div>
+                            
+                            <div class="summary-item">
+                                <span>Impuestos</span>
+                                <span id="order-tax">$0.00</span>
+                            </div>
+                            
+                            <div class="summary-item total">
+                                <span>Total</span>
+                                <span id="order-total">$0.00</span>
+                            </div>
+                        </div>
+                        
+                        <div class="secure-payment">
+                            <i class="fas fa-shield-alt"></i> Transacción segura con encriptación SSL
+                        </div>
+                        
+                        <div class="customer-support">
+                            <h4><i class="fas fa-headset"></i> ¿Necesitas ayuda?</h4>
+                            <p>Contáctanos por WhatsApp o llámanos al <strong>+123 456 7890</strong></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
